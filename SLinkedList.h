@@ -28,27 +28,27 @@ public:
 
 	~SLinkedList(){ while (!empty()) removeFront(); }
 
-	void addFront(const T& e) {                  // add to front of list
-    		SNode<T>* v = new SNode<T>;          // create new node
-		v->elem = e;                             // store data
-    		v->next = head;                      // head now follows v
-    		head = v;                            // v is now the head
-  	}
+	void addFront(const T& e) {					// add to front of list
+		SNode<T>* v = new SNode<T>;				// create new node
+		v->elem = e;							// store data
+		v->next = head;							// head now follows v
+		head = v;								// v is now the head
+	}
 
-	void removeFront() {             	         // remove front item
-    		SNode<T>* old = head;                // save current head
-    		head = old->next;                    // skip over old head
-    		delete old;                          // delete the old head
-  	}
+	void removeFront() {						// remove front item
+		SNode<T>* old = head;					// save current head
+		head = old->next;						// skip over old head
+		delete old;								// delete the old head
+	}
 
 	void print() {
-    		SNode<T>* v = head;
-    		while (v != NULL){
-    			cout << v->elem << " ";
-    			v = v->next;
-   		}
-   		cout << endl;
-  	}
+		SNode<T>* v = head;
+		while (v != NULL){
+			cout << v->elem << " ";
+			v = v->next;
+		}
+	cout << endl;
+	}
 
 	SLinkedList(const SLinkedList & l) {
 		if (l.head == NULL)
@@ -73,7 +73,7 @@ public:
 					myCursor->next = NULL;
 
 				//cout << "head->elem is " << head->elem << endl;
-                                //cout << "myCursor->elem is " << myCursor->elem << endl;
+				//cout << "myCursor->elem is " << myCursor->elem << endl;
 
 				theirCursor = theirCursor->next;
 			}

@@ -7,7 +7,7 @@
 
 class StackEmpty : public RuntimeException {
 public:
-    StackEmpty(const std::string& err) : RuntimeException(err) {}
+	StackEmpty(const std::string& err) : RuntimeException(err) {}
 };
 
 #endif // STACKEXCEPTIONS_H
